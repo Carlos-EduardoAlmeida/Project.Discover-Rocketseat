@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --cor-texto: white;
+  --fundo-url: url(./assets/bg-mobile.jpg);
+  --cor-fundo-hover: rgba(255, 255, 255, 0.03);
+  --botao-ls: url(./assets/moon-stars.svg)
+}
+
+.luz{
+  --cor-texto: black;
+  --fundo-url: url(./assets/bg-mobile-light.jpg);
+  --cor-fundo-hover: rgba(88, 86, 86, 0.5);
+  --botao-ls: url(./assets/sun.svg)
+}
+
+body {
+  background: var(--fundo-url) no-repeat top center/cover;
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--cor-texto);
+}
+
+#container {
+  width: 300px;
+  height: auto;
+  margin: 26px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  padding: 22px;
+  text-align: center;
+}
+
+#profile img {
+  width: 110px;
+  height: 80px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 16px;
+}
+
+/*Botão-troca*/
+#botao-troca{
+  position: relative;
+  width: 64px;
+  margin: 0 auto 16px;
+}
+
+#botao-troca button{
+  width: 32px;
+  height: 32px;
+  margin-top: 8px;
+  background: white var(--botao-ls) no-repeat center;
+  border: 0px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-70%);
+}
+
+#botao-troca span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);;
+  border: 1px solid white;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 9999px;
+}
+
+.luz #botao-troca button{
+  right: 0;
+  left: initial;
+}
+
+/* LInks lista */
+
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--cor-texto);
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.3s;
+}
+
+ul li a:hover {
+  background: var(--cor-fundo-hover);
+  border: 2px solid var(--cor-texto);
+}
+
+
+/*Redes socias */
+#redessociais{
+  font-size: 24px;
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  justify-content: center;
+}
+
+#redessociais a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#redessociais a:hover{
+  background-color: var(--cor-fundo-hover);
+}
+
+footer{
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
